@@ -1,0 +1,385 @@
+@charset "UTF-8";
+
+@media screen and (max-width:1080px){
+    aside.asideScreen {
+        background-color:#0d0dc2;
+        color: white;
+        padding-top: 20px;
+        width: 100%;
+        height: 120px;
+        top: 0;
+        left: 0;
+        position: fixed;
+    }
+
+    aside.asideScreen h1 {
+        font-size: 1.3em;
+        text-align: left;
+        margin-left: 20px;
+        float: left;
+    }
+    
+    aside.asideScreen img {
+        height: 60px;
+        width: 60px;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+    
+    aside.asideScreen nav {
+        font-size: 1.1em;
+        margin-left: 100px;
+        margin-top: -70px;
+        width: calc(100% - 100px);
+        columns: 3;
+    }
+    
+    aside.asideScreen li {
+        padding: 20px;
+    }
+
+    main.mainScreen {
+        background-color: white;
+        width: calc(100% - 100px);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 140px;
+        padding-left: 50px;
+    }
+    
+    main.mainScreen p {
+        font-size: 1em;
+        font-weight: normal;
+        line-height: 1.8em;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+
+    main.mainScreen .topo {
+        width: calc(100% + 100px);
+        height: 200px;
+        margin-left: -80px;
+    }
+
+    main.mainScreen h1, h2 {
+        font-size: 2.5em;
+        color: #0d0dc2;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    main.mainScreen .laterais {
+        height: 250px;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    main.mainScreen section h2 {
+        font-size: 2em;
+    }
+    
+    div a.btn {
+        margin-left: 350px;
+    }
+
+
+    main.mainScreen #img-0 {
+        background-image: url(../img/banner2.jpg);
+    }
+    
+    main.mainScreen #img-1 {
+        background-image: url(../img/banner3.jpg);
+        margin-right: 40px;
+        float: left;
+    }
+
+
+    main.mainScreen #img-2 {
+        background-image: url(../img/banner4.jpg);
+        margin-right: 0px;
+        margin-left: 40px;
+        float: right;
+    }
+    
+
+    main.mainScreen .grade {
+        width: 100%;
+        height: 250px;
+        flex-wrap: wrap;
+    }
+
+    main.mainScreen .product-1 {
+        height: 130px;
+        width: 170px;
+    }
+
+    main.mainScreen .product-2 {
+        height: 200px;
+        width: 180px;
+    }
+
+    main.mainScreen .product-3 {
+        height: 120px;
+        width: 230px;
+    }
+    
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+* {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+aside {
+    background-color: #0d0dc2;
+    color: white;
+    padding-top: 20px;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+aside h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+aside img {
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+aside nav {
+    font-size: 1.2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    position: relative;
+}
+
+aside li {
+    padding: 20px;
+
+}
+
+.menu {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.menu:hover {
+    color: yellow;
+}
+
+main {
+    background-color: white;
+    margin-left: 300px;
+    padding-left: 50px;
+}
+
+main p {
+    font-size: 1.1em;
+    font-weight: normal;
+    line-height: 1.8em;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+main .topo {
+    height: 500px;
+    margin-left: -50px;
+    background-position: center;
+    background-size: cover;
+}
+
+main h1, h2 {
+    font-size: 3em;
+    color: #0d0dc2;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+main .laterais {
+    height: 400px;
+    width: 300px;
+    background-position: center;
+    background-size: cover;
+}
+
+section#bemvindo p {
+    margin-right: 50px;
+}
+
+section h2 {
+    font-size: 2.5em;
+}
+
+div a.btn {
+    margin-left: 350px;
+}
+
+.grade {
+    display: flex;
+    width: 950px;
+    height: 200px;
+    gap: 10px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.product-1 {
+    height: 200px;
+    width: 182px;
+    background-position: center;
+    background-size: cover;
+}
+
+.product-2 {
+    height: 200px;
+    width: 310px;
+    background-position: center;
+    background-size: cover;
+}
+
+.product-3 {
+    height: 200px;
+    width: 230px;
+    background-position: center;
+    background-size: cover;
+}
+
+#img-0 {
+    background-image: url(../img/banner2.jpg);
+}
+
+#img-1 {
+    background-image: url(../img/banner3.jpg);
+    margin-right: 50px;
+    float: left;
+}
+
+#img-2 {
+    background-image: url(../img/banner4.jpg);
+    margin-right: 50px;
+    margin-left: 50px;
+    float: right;
+}
+
+#img-3 {
+    background-image: url(../img/galeria1.jpg);
+}
+
+#img-4 {
+    background-image: url(../img/galeria2.jpg);
+}
+
+#img-5 {
+    background-image: url(../img/galeria3.jpg);
+}
+
+#img-6 {
+    background-image: url(../img/galeria4.jpg);
+}
+
+#img-7 {
+    background-image: url(../img/galeria5.jpg);
+}
+
+#img-8 {
+    background-image: url(../img/galeria6.jpg);
+}
+
+#img-9 {
+    background-image: url(../img/galeria7.jpg);
+}
+
+#img-10 {
+    background-image: url(../img/galeria8.jpg);
+}
+
+#img-11 {
+    background-image: url(../img/galeria9.jpg);
+}
+
+#img-12 {
+    background-image: url(../img/galeria10.jpg);
+}
+
+#img-13 {
+    background-image: url(../img/galeria11.jpg);
+}
+
+#img-14 {
+    background-image: url(../img/galeria12.jpg);
+}
+
+
+
+.btn {
+    display: block;
+    background-color: #0d0dc2;
+    color: white;
+    font-size: 1.1em;
+    text-align: center;
+    text-decoration: none;
+    width: 180px;
+    height: 20px;
+    padding: 20px 0px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: #1d1dcedc;
+}
+
+form * {
+    width: 500px;
+    height: 30px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 100;
+    border: 1px #1d1dcedc solid;
+}
+
+form input::placeholder {
+    color: #0d0dc2;
+}
+
+form #msg {
+    padding-bottom: 120px;
+}
+
+form input.btn {
+    border: 0px;
+    height: 60px;
+}
+
+section#contato {
+    padding-bottom: 100px;
+}
+
+footer {
+    color: #0d0dc2;
+    font-weight: bolder;
+    font-size: 1.4em;
+    text-align: center;
+    margin-left: 300px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
