@@ -28,7 +28,7 @@ body {
 
 aside {
     display: flex;
-    background-color: #0D2C54;
+    background-color: var(--cor-1);
     position: fixed;
     flex-direction: row;
     justify-content: space-between;
@@ -49,13 +49,28 @@ aside > div {
     align-items: center;
     width: 120px;
 }
+
+aside button {
+    display: none;
+    background-image: url('../img/btn-open.png');
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+
+aside button.actived {
+    background-image: url('../img/btn-close.png');
+}
+
 #img-nav {
     width: 50px;
     height: 50px;
     background-image: url('../img/stand.png');
     background-position: center;
     background-size: cover;
-
 }
 
 ul {
@@ -75,31 +90,22 @@ a:hover {
     color: var(--cor-2);
 }
 
-aside button {
-    display: none;
-    background-image: url('../img/btn-open.png');
-    background-color: transparent;
-    background-position: center;
-    background-size: cover;
-    border: none;
-    width: 50px;
-    height: 50px;
-}
-
-aside button.actived {
-    background-image: url('../img/btn-close.png');
-}
-
 main {
     margin-top: 120px;
 }
 
-#background {
-    background-image: url('../img/background.jpg');
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 350px;
+main .btn {
+    background-color: var(--cor-1);
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    transition: 0.3s;
+}
+
+main .btn:hover {
+    background-color: #133e75;
+    color: var(--cor-2);
 }
 
 section {
@@ -123,6 +129,14 @@ h2 {
 
 .texto p {
     margin-bottom: 10px;
+}
+
+#background {
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
 }
 
 #img-1 {
@@ -201,27 +215,18 @@ h2 {
     display: flex;
     gap: 20px;
     width: 100%;
-    height: 400px;
-}
-
-main .btn {
-    background-color: var(--cor-1);
-    width: 150px;
-    height: 50px;
-    border-radius: 15px;
-    border: none;
-    transition: 0.3s;
-}
-
-main .btn:hover {
-    background-color: #133e75;
-    color: var(--cor-2);
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+form .btn {
+    width: 250px;
+    font-size: 1.2em;
+    color: white;
 }
 
 input {
@@ -241,12 +246,6 @@ input::placeholder {
 
 }
 
-form .btn {
-    width: 250px;
-    font-size: 1.2em;
-    color: white;
-}
-
 #msg {
     padding: 30px 0px 200px 10px;
     font-size: 1.2em;
@@ -258,13 +257,41 @@ footer {
     margin: 50px 0px 20px 0px;
 }
 
+@media all and (max-width: 480px) {
+    #background {
+        height: 200px;
+    }
+
+    .laterais {
+        height: 200px;
+        margin: 10px;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .container-0 {
+        flex-direction: column;
+    }
+
+    .container-1 {
+        flex-direction: column;
+    }
+
+    .docesImg {
+        height: 200px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .texto {
+        width: 40%;
+    }
+}
+
 @media all and (max-width: 1024px) {
     ul {
-        visibility: hidden;
-    }
-    
-    ul.actived {
-        visibility: visible;
         flex-direction: column;
         position: absolute;
         background-color: white;
@@ -273,6 +300,12 @@ footer {
         width: 100%;
         height: 500px;
         padding: 50px;
+        visibility: hidden;
+    }
+    
+    ul.actived {
+        visibility: visible;
+        
     }
 
     ul.actived li {
@@ -283,7 +316,6 @@ footer {
         color: black;
     }
     
-
     aside button {
         display: block;
     }
