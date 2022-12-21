@@ -12,7 +12,8 @@
 
 :root {
     --cor-1: #0D2C54;
-    --cor-2: #E68A44;
+    --cor-2: #133e75;
+    --cor-3: #E68A44;
 }
 
 * {
@@ -26,7 +27,7 @@ body {
     background-color: white;
 }
 
-aside {
+header {
     display: flex;
     background-color: var(--cor-1);
     position: fixed;
@@ -42,7 +43,7 @@ aside {
     top: 0;
 }
 
-aside > div {
+header > div {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -50,7 +51,7 @@ aside > div {
     width: 120px;
 }
 
-aside button {
+header button {
     display: none;
     background-image: url('../img/btn-open.png');
     background-color: transparent;
@@ -61,11 +62,11 @@ aside button {
     height: 50px;
 }
 
-aside button.actived {
+header button.actived {
     background-image: url('../img/btn-close.png');
 }
 
-#img-nav {
+#logo {
     width: 50px;
     height: 50px;
     background-image: url('../img/stand.png');
@@ -78,6 +79,7 @@ ul {
     flex-direction: row;
     gap: 30px;
     list-style: none;
+    z-index: 1000;
 }
 
 a {
@@ -87,7 +89,7 @@ a {
 }
 
 a:hover {
-    color: var(--cor-2);
+    color: var(--cor-3);
 }
 
 main {
@@ -104,8 +106,8 @@ main .btn {
 }
 
 main .btn:hover {
-    background-color: #133e75;
-    color: var(--cor-2);
+    background-color: var(--cor-2);
+    color: var(--cor-3);
 }
 
 section {
@@ -258,6 +260,19 @@ footer {
 }
 
 @media all and (max-width: 480px) {
+    header {
+        height: 50px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #logo {
+        width: 30px;
+        height: 30px;;
+    }
+
     #background {
         height: 200px;
     }
@@ -282,9 +297,30 @@ footer {
     .docesImg {
         height: 200px;
     }
+
+    ul {
+        top: 50px;
+    }
+
+    ul.actived {
+        height: calc(100vh - 50px);
+    }
 }
 
 @media all and (max-width: 768px) {
+    header {
+        height: 100px;
+    }
+    
+    h1 {
+        font-size: 1.7em;
+    }
+
+    #logo {
+        width: 35px;
+        height: 35px;;
+    }
+
     .texto {
         width: 40%;
     }
@@ -294,30 +330,38 @@ footer {
     ul {
         flex-direction: column;
         position: absolute;
-        background-color: white;
-        top: 120px;
+        background-color: var(--cor-1);
+        top: 100px;
         left: 0px;
         width: 100%;
-        height: 500px;
+        height: 0;
+        transition: 0.6s;
         padding: 50px;
+        overflow-y: hidden;
         visibility: hidden;
     }
     
     ul.actived {
+        height: calc(100vh - 100px);
         visibility: visible;
-        
+        overflow: auto;
     }
 
     ul.actived li {
+        width: 100%;
+        padding: 15px;
         border-bottom: 1px solid black;
     }
 
-    ul.actived a {
-        color: black;
+    ul.actived li:hover {
+        background-color: var(--cor-2);
     }
-    
-    aside button {
+
+    ul.actived a {
+        color: white;
+    }
+
+    header button {
         display: block;
     }
 }
-
